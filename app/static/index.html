@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS CTI // Autonomous Cyber Threat Intelligence Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <div class="brand-icon">⚡</div>
+      <div>
+        <h1>NEXUS <span>CTI</span></h1>
+      </div>
+      <div class="status-badge" id="system-status">
+        <span class="status-dot"></span>
+        <span>ENGINE ARMED // 0 FALSE POSITIVES</span>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-primary" id="btn-load-mixed" onclick="loadDataset('mixed')">
+        <span>⚡</span> Load Attack Dataset
+      </button>
+      <button class="btn btn-success" id="btn-load-benign" onclick="loadDataset('benign_only')">
+        <span>🛡️</span> Run Benign Benchmark (0 FP Test)
+      </button>
+      <button class="btn" id="btn-gen-data" onclick="generateDatasets()">
+        <span>🔄</span> Re-Generate Data
+      </button>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <nav class="tabs-bar">
+    <button class="tab-btn active" onclick="switchTab('incidents')">
+      <span>🚨</span> Correlated Incidents (<span id="tab-inc-count">0</span>)
+    </button>
+    <button class="tab-btn" onclick="switchTab('evaluation')">
+      <span>🎯</span> Judging & Benchmark Metrics
+    </button>
+    <button class="tab-btn" onclick="switchTab('graph')">
+      <span>🕸️</span> Threat Entity Graph
+    </button>
+    <button class="tab-btn" onclick="switchTab('logs')">
+      <span>📜</span> Raw Log Explorer
+    </button>
+    <button class="tab-btn" onclick="switchTab('upload')">
+      <span>📂</span> Universal Dataset Adapter
+    </button>
+  </nav>
+
+  <!-- Top Metrics Ribbon -->
+  <section class="stats-ribbon">
+    <div class="stat-card">
+      <span class="stat-label">Total Logs Ingested</span>
+      <span class="stat-value" id="stat-total-logs">0</span>
+      <span class="stat-sub">Multi-source unified telemetry</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Detected Incidents</span>
+      <span class="stat-value" id="stat-incidents" style="color: var(--crimson);">0</span>
+      <span class="stat-sub">Multi-stage coordinated attacks</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">False Positive Rate</span>
+      <span class="stat-value" id="stat-fp-rate" style="color: var(--green);">0.00%</span>
+      <span class="stat-sub">Hard negative suppression active</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">F1 Benchmark Score</span>
+      <span class="stat-value" id="stat-f1-score" style="color: var(--cyan);">1.00</span>
+      <span class="stat-sub">Ground-truth validation</span>
+    </div>
+  </section>
+
+  <!-- Main Views Container -->
+  <main class="container">
+    <!-- View 1: Incidents & Kill Chain -->
+    <div id="view-incidents" class="view-content active">
+      <div class="split-view">
+        <!-- Incidents List -->
+        <div class="incident-list-panel">
+          <div class="panel-header">
+            <span>ACTIVE INCIDENTS</span>
+            <span class="badge badge-critical" id="incident-counter-badge">0 ALERT</span>
+          </div>
+          <div class="incident-scroll" id="incidents-container">
+            <!-- Dynamic incident items inserted here -->
+            <div style="padding: 1.5rem; text-align: center; color: var(--text-muted);">
+              Loading threat intelligence incidents...
+            </div>
+          </div>
+        </div>
+
+        <!-- Incident Detail -->
+        <div class="incident-detail-panel" id="incident-detail">
+          <div style="text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
+            Select an attack incident from the left to reconstruct its kill chain and evidence.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- View 2: Evaluation & Judging Criteria -->
+    <div id="view-evaluation" class="view-content">
+      <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <h2>CTI Evaluation & Judging Criteria Benchmark</h2>
+          <p style="color: var(--text-muted); font-size: 0.88rem;">
+            Direct proof of criteria: (1) Correct stage ordering (2) 0 False Alarms on Clean Logs (3) Catches all real attacks.
+          </p>
+        </div>
+        <button class="btn btn-primary" onclick="loadEvaluation()"><span>🔄</span> Refresh Evaluation</button>
+      </div>
+
+      <div class="eval-grid" id="eval-metrics-grid">
+        <!-- Metrics cards will be rendered here -->
+      </div>
+
+      <div style="margin-top: 1.5rem;">
+        <h3 class="section-title"><span>⚔️</span> Per-Attack Ground-Truth Breakdown</h3>
+        <div class="logs-table-container">
+          <table class="logs-table" id="attacks-eval-table">
+            <thead>
+              <tr>
+                <th>Attack Scenario</th>
+                <th>Detection Status</th>
+                <th>Matched Incident ID</th>
+                <th>Stage Overlap %</th>
+                <th>Evidence Logs Linked</th>
+                <th>Risk Score</th>
+              </tr>
+            </thead>
+            <tbody id="attacks-eval-body">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- View 3: Threat Entity Graph -->
+    <div id="view-graph" class="view-content">
+      <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1rem; min-height: 500px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <h3 class="section-title"><span>🕸️</span> Multi-Relational Threat Graph</h3>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Links users, hosts, IPs, applications, and storage devices</span>
+        </div>
+        <div id="graph-canvas-container" style="width: 100%; height: 500px; display: flex; align-items: center; justify-content: center;">
+          <svg id="threat-graph-svg" style="width: 100%; height: 100%; background: #06080d; border-radius: 6px;"></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- View 4: Raw Logs Explorer -->
+    <div id="view-logs" class="view-content">
+      <div style="display: flex; gap: 0.75rem; margin-bottom: 1rem;">
+        <input type="text" id="log-search-input" placeholder="Search user, host, IP, event type, or log payload..." style="flex: 1; background: var(--bg-card); border: 1px solid var(--border-subtle); color: #fff; padding: 0.6rem 1rem; border-radius: 6px; font-family: var(--font-mono); font-size: 0.85rem;" onkeyup="if(event.key === 'Enter') searchLogs()">
+        <button class="btn btn-primary" onclick="searchLogs()">Search Logs</button>
+      </div>
+      <div class="logs-table-container">
+        <table class="logs-table">
+          <thead>
+            <tr>
+              <th>Timestamp</th>
+              <th>Event Type</th>
+              <th>User</th>
+              <th>Host</th>
+              <th>Source IP</th>
+              <th>App / File</th>
+              <th>Status</th>
+              <th>Incident Link</th>
+            </tr>
+          </thead>
+          <tbody id="logs-tbody">
+            <!-- Dynamically populated -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- View 5: Universal Dataset Adapter -->
+    <div id="view-upload" class="view-content">
+      <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 2rem; max-width: 700px; margin: 0 auto; text-align: center;">
+        <h2 style="margin-bottom: 0.5rem;">Universal Public Dataset Ingestion</h2>
+        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.5rem;">
+          Ingest any external security dataset: CSV, JSON, NDJSON, Sysmon, Zeek/Bro, or Linux Auth logs.
+          Our Universal Adapter automatically detects and maps schema fields using heuristics and Groq LLM inference.
+        </p>
+
+        <div style="border: 2px dashed var(--border-color); border-radius: 8px; padding: 2.5rem; cursor: pointer;" onclick="document.getElementById('file-upload-input').click()">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📤</div>
+          <p style="font-weight: 600;">Click to select or drag and drop a security log dataset</p>
+          <span style="font-size: 0.75rem; color: var(--text-muted);">Supports .csv, .json, .jsonl, .log</span>
+          <input type="file" id="file-upload-input" style="display: none;" onchange="handleFileUpload(event)">
+        </div>
+        <div id="upload-status" style="margin-top: 1rem; font-size: 0.85rem; font-weight: 600;"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

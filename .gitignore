@@ -1,0 +1,51 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environment & local credentials
+.env
+.env.local
+*.local
+
+# SQLite & databases
+*.db
+*.db-journal
+
+# Test & coverage caches
+.pytest_cache/
+htmlcov/
+dist/
+build/
+*.egg-info/
+evaluation_report.json
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Node / Frontend artifacts
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.tanstack/
+frontend/.output/
+frontend/.vinxi/
+frontend/.nitro/
+
+# System / Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Large generated dataset logs (reproducible deterministically via generator script)
+data/generated/*.jsonl
+data/uploads/*
+data/watched/*
+!data/uploads/.gitkeep
+!data/watched/.gitkeep
+!data/generated/.gitkeep

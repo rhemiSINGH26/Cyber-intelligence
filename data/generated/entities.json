@@ -1,0 +1,803 @@
+{
+  "users": [
+    {
+      "username": "mmoore",
+      "department": "Finance",
+      "role": "analyst",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-029",
+        "WKS-028",
+        "WKS-012"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "eramirez",
+      "department": "Finance",
+      "role": "analyst",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-027",
+        "WKS-044",
+        "WKS-034"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "ahill",
+      "department": "Sales",
+      "role": "sales_rep",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-033",
+        "WKS-025"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "jlewis",
+      "department": "Operations",
+      "role": "procurement",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-013",
+        "WKS-017",
+        "WKS-034"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "mperez",
+      "department": "HR",
+      "role": "benefits_admin",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-032",
+        "WKS-016",
+        "WKS-049"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "jharris",
+      "department": "Legal",
+      "role": "paralegal",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-033",
+        "WKS-048"
+      ],
+      "typical_geo": "DE"
+    },
+    {
+      "username": "rrobinson",
+      "department": "IT",
+      "role": "sysadmin",
+      "is_admin": true,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-027"
+      ],
+      "typical_geo": "CA"
+    },
+    {
+      "username": "bflores",
+      "department": "Finance",
+      "role": "controller",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-019",
+        "WKS-035"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "ganderson",
+      "department": "Finance",
+      "role": "analyst",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-028",
+        "WKS-038",
+        "WKS-037"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "srobinson",
+      "department": "Finance",
+      "role": "cfo_assistant",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-019",
+        "WKS-044"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "snelson",
+      "department": "Legal",
+      "role": "attorney",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-015",
+        "WKS-009"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "rthomas",
+      "department": "HR",
+      "role": "benefits_admin",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-044",
+        "WKS-029"
+      ],
+      "typical_geo": "CA"
+    },
+    {
+      "username": "clee",
+      "department": "IT",
+      "role": "network_admin",
+      "is_admin": true,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-021"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "sjones",
+      "department": "Legal",
+      "role": "attorney",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-027",
+        "WKS-020",
+        "WKS-017"
+      ],
+      "typical_geo": "DE"
+    },
+    {
+      "username": "asanchez",
+      "department": "Sales",
+      "role": "sales_manager",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-002"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "jmitchell",
+      "department": "IT",
+      "role": "network_admin",
+      "is_admin": true,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-021"
+      ],
+      "typical_geo": "UK"
+    },
+    {
+      "username": "nanderson",
+      "department": "Executive",
+      "role": "vp",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-008",
+        "WKS-038"
+      ],
+      "typical_geo": "IN"
+    },
+    {
+      "username": "lmartinez",
+      "department": "Finance",
+      "role": "analyst",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-049",
+        "WKS-017"
+      ],
+      "typical_geo": "CA"
+    },
+    {
+      "username": "ahill60",
+      "department": "Finance",
+      "role": "cfo_assistant",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-032",
+        "WKS-040",
+        "WKS-033"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "dadams",
+      "department": "Finance",
+      "role": "controller",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-014"
+      ],
+      "typical_geo": "UK"
+    },
+    {
+      "username": "ssmith",
+      "department": "Executive",
+      "role": "cto",
+      "is_admin": true,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-001",
+        "WKS-010",
+        "WKS-035"
+      ],
+      "typical_geo": "UK"
+    },
+    {
+      "username": "amiller",
+      "department": "Operations",
+      "role": "ops_manager",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-016"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "ehernandez",
+      "department": "HR",
+      "role": "hr_manager",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-046",
+        "WKS-038",
+        "WKS-005"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "mdavis",
+      "department": "Legal",
+      "role": "attorney",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-021",
+        "WKS-012",
+        "WKS-038"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "kgarcia",
+      "department": "Engineering",
+      "role": "senior_dev",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-038"
+      ],
+      "typical_geo": "IN"
+    },
+    {
+      "username": "dnelson",
+      "department": "Finance",
+      "role": "accountant",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-046",
+        "WKS-048",
+        "WKS-028"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "swright",
+      "department": "IT",
+      "role": "helpdesk",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-044",
+        "WKS-035"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "gadams",
+      "department": "IT",
+      "role": "helpdesk",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-037",
+        "WKS-015",
+        "WKS-039"
+      ],
+      "typical_geo": "IN"
+    },
+    {
+      "username": "jjones",
+      "department": "Finance",
+      "role": "accountant",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-022",
+        "WKS-021"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "rrivera",
+      "department": "Sales",
+      "role": "sales_rep",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-023",
+        "WKS-046",
+        "WKS-040"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "ljones",
+      "department": "Finance",
+      "role": "analyst",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-021",
+        "WKS-023",
+        "WKS-037"
+      ],
+      "typical_geo": "UK"
+    },
+    {
+      "username": "jrodriguez",
+      "department": "Marketing",
+      "role": "content_writer",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-025"
+      ],
+      "typical_geo": "IN"
+    },
+    {
+      "username": "mgonzalez",
+      "department": "Sales",
+      "role": "account_exec",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-023"
+      ],
+      "typical_geo": "CA"
+    },
+    {
+      "username": "mrobinson",
+      "department": "Legal",
+      "role": "attorney",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-028",
+        "WKS-047"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "rperez",
+      "department": "Engineering",
+      "role": "devops",
+      "is_admin": true,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-013"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "srodriguez",
+      "department": "Sales",
+      "role": "sales_manager",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-020"
+      ],
+      "typical_geo": "UK"
+    },
+    {
+      "username": "rlewis",
+      "department": "Marketing",
+      "role": "content_writer",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-014",
+        "WKS-019"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "jcarter",
+      "department": "Operations",
+      "role": "ops_manager",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-034"
+      ],
+      "typical_geo": "CA"
+    },
+    {
+      "username": "ssanchez",
+      "department": "Marketing",
+      "role": "seo_specialist",
+      "is_admin": false,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-029",
+        "WKS-047"
+      ],
+      "typical_geo": "CA"
+    },
+    {
+      "username": "trobinson",
+      "department": "Engineering",
+      "role": "devops",
+      "is_admin": true,
+      "is_service_account": false,
+      "typical_hosts": [
+        "WKS-034",
+        "WKS-005"
+      ],
+      "typical_geo": "IN"
+    },
+    {
+      "username": "svc_backup",
+      "department": "IT",
+      "role": "service",
+      "is_admin": false,
+      "is_service_account": true,
+      "typical_hosts": [
+        "SRV-006",
+        "SRV-007",
+        "SRV-011"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "backup_admin",
+      "department": "IT",
+      "role": "service",
+      "is_admin": false,
+      "is_service_account": true,
+      "typical_hosts": [
+        "SRV-006",
+        "SRV-007",
+        "SRV-011"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "nightly_sync",
+      "department": "IT",
+      "role": "service",
+      "is_admin": false,
+      "is_service_account": true,
+      "typical_hosts": [
+        "SRV-006",
+        "SRV-007",
+        "SRV-011"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "svc_monitor",
+      "department": "IT",
+      "role": "service",
+      "is_admin": false,
+      "is_service_account": true,
+      "typical_hosts": [
+        "SRV-006",
+        "SRV-007",
+        "SRV-011"
+      ],
+      "typical_geo": "US"
+    },
+    {
+      "username": "svc_deploy",
+      "department": "Engineering",
+      "role": "service",
+      "is_admin": false,
+      "is_service_account": true,
+      "typical_hosts": [
+        "SRV-006",
+        "SRV-007",
+        "SRV-011"
+      ],
+      "typical_geo": "US"
+    }
+  ],
+  "hosts": [
+    {
+      "hostname": "WKS-001",
+      "host_type": "workstation",
+      "ip": "10.3.160.145"
+    },
+    {
+      "hostname": "WKS-002",
+      "host_type": "workstation",
+      "ip": "10.0.138.55"
+    },
+    {
+      "hostname": "WKS-003",
+      "host_type": "workstation",
+      "ip": "10.2.34.239"
+    },
+    {
+      "hostname": "DB-004",
+      "host_type": "database_server",
+      "ip": "10.2.226.18"
+    },
+    {
+      "hostname": "WKS-005",
+      "host_type": "workstation",
+      "ip": "10.2.73.41"
+    },
+    {
+      "hostname": "SRV-006",
+      "host_type": "server",
+      "ip": "10.3.214.140"
+    },
+    {
+      "hostname": "SRV-007",
+      "host_type": "server",
+      "ip": "10.5.78.157"
+    },
+    {
+      "hostname": "WKS-008",
+      "host_type": "workstation",
+      "ip": "10.0.171.210"
+    },
+    {
+      "hostname": "WKS-009",
+      "host_type": "workstation",
+      "ip": "10.2.239.170"
+    },
+    {
+      "hostname": "WKS-010",
+      "host_type": "workstation",
+      "ip": "10.1.68.30"
+    },
+    {
+      "hostname": "SRV-011",
+      "host_type": "server",
+      "ip": "10.0.191.142"
+    },
+    {
+      "hostname": "WKS-012",
+      "host_type": "workstation",
+      "ip": "10.2.73.155"
+    },
+    {
+      "hostname": "WKS-013",
+      "host_type": "workstation",
+      "ip": "10.5.88.53"
+    },
+    {
+      "hostname": "WKS-014",
+      "host_type": "workstation",
+      "ip": "10.4.126.65"
+    },
+    {
+      "hostname": "WKS-015",
+      "host_type": "workstation",
+      "ip": "10.0.163.109"
+    },
+    {
+      "hostname": "WKS-016",
+      "host_type": "workstation",
+      "ip": "10.0.1.86"
+    },
+    {
+      "hostname": "WKS-017",
+      "host_type": "workstation",
+      "ip": "10.5.251.68"
+    },
+    {
+      "hostname": "DC-018",
+      "host_type": "domain_controller",
+      "ip": "10.1.190.114"
+    },
+    {
+      "hostname": "WKS-019",
+      "host_type": "workstation",
+      "ip": "10.5.110.144"
+    },
+    {
+      "hostname": "WKS-020",
+      "host_type": "workstation",
+      "ip": "10.0.20.242"
+    },
+    {
+      "hostname": "WKS-021",
+      "host_type": "workstation",
+      "ip": "10.4.10.214"
+    },
+    {
+      "hostname": "WKS-022",
+      "host_type": "workstation",
+      "ip": "10.4.142.38"
+    },
+    {
+      "hostname": "WKS-023",
+      "host_type": "workstation",
+      "ip": "10.1.11.79"
+    },
+    {
+      "hostname": "DC-024",
+      "host_type": "domain_controller",
+      "ip": "10.2.231.239"
+    },
+    {
+      "hostname": "WKS-025",
+      "host_type": "workstation",
+      "ip": "10.2.54.175"
+    },
+    {
+      "hostname": "DB-026",
+      "host_type": "database_server",
+      "ip": "10.1.171.27"
+    },
+    {
+      "hostname": "WKS-027",
+      "host_type": "workstation",
+      "ip": "10.4.227.224"
+    },
+    {
+      "hostname": "WKS-028",
+      "host_type": "workstation",
+      "ip": "10.4.192.40"
+    },
+    {
+      "hostname": "WKS-029",
+      "host_type": "workstation",
+      "ip": "10.1.250.205"
+    },
+    {
+      "hostname": "WKS-030",
+      "host_type": "workstation",
+      "ip": "10.3.7.46"
+    },
+    {
+      "hostname": "WKS-031",
+      "host_type": "workstation",
+      "ip": "10.3.206.172"
+    },
+    {
+      "hostname": "WKS-032",
+      "host_type": "workstation",
+      "ip": "10.2.41.202"
+    },
+    {
+      "hostname": "WKS-033",
+      "host_type": "workstation",
+      "ip": "10.3.224.10"
+    },
+    {
+      "hostname": "WKS-034",
+      "host_type": "workstation",
+      "ip": "10.1.52.210"
+    },
+    {
+      "hostname": "WKS-035",
+      "host_type": "workstation",
+      "ip": "10.2.79.211"
+    },
+    {
+      "hostname": "SRV-036",
+      "host_type": "server",
+      "ip": "10.1.58.7"
+    },
+    {
+      "hostname": "WKS-037",
+      "host_type": "workstation",
+      "ip": "10.3.85.72"
+    },
+    {
+      "hostname": "WKS-038",
+      "host_type": "workstation",
+      "ip": "10.2.90.165"
+    },
+    {
+      "hostname": "WKS-039",
+      "host_type": "workstation",
+      "ip": "10.3.174.252"
+    },
+    {
+      "hostname": "WKS-040",
+      "host_type": "workstation",
+      "ip": "10.2.241.8"
+    },
+    {
+      "hostname": "SRV-041",
+      "host_type": "server",
+      "ip": "10.0.225.249"
+    },
+    {
+      "hostname": "SRV-042",
+      "host_type": "server",
+      "ip": "10.2.46.149"
+    },
+    {
+      "hostname": "SRV-043",
+      "host_type": "server",
+      "ip": "10.2.10.28"
+    },
+    {
+      "hostname": "WKS-044",
+      "host_type": "workstation",
+      "ip": "10.2.187.202"
+    },
+    {
+      "hostname": "SRV-045",
+      "host_type": "server",
+      "ip": "10.2.112.156"
+    },
+    {
+      "hostname": "WKS-046",
+      "host_type": "workstation",
+      "ip": "10.0.99.231"
+    },
+    {
+      "hostname": "WKS-047",
+      "host_type": "workstation",
+      "ip": "10.2.12.182"
+    },
+    {
+      "hostname": "WKS-048",
+      "host_type": "workstation",
+      "ip": "10.0.134.237"
+    },
+    {
+      "hostname": "WKS-049",
+      "host_type": "workstation",
+      "ip": "10.5.185.241"
+    },
+    {
+      "hostname": "WKS-050",
+      "host_type": "workstation",
+      "ip": "10.2.111.18"
+    }
+  ]
+}
